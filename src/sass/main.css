@@ -1,0 +1,92 @@
+body {
+  margin: 0; }
+
+.App {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: darkgrey;
+  overflow: hidden; }
+
+.Text {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.page-banner {
+  text-align: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 10%;
+  background-color: yellow; }
+
+.page-footer {
+  text-align: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 10%;
+  padding: 0;
+  background-color: yellow; }
+
+.ul-nav {
+  justify-content: left;
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 80%;
+  width: 200px;
+  background-color: #217584;
+  border: 1px solid red; }
+  .ul-nav :hover {
+    background-color: yellow; }
+  .ul-nav :active {
+    background-color: blue; }
+
+.li-nav-item a {
+  display: block;
+  color: red;
+  padding: 8px 16px;
+  text-decoration: none; }
+
+.li-nav-item {
+  text-align: center;
+  border-bottom: 1px solid #555;
+  height: 10%; }
+
+.ellipsis {
+  max-width: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.table {
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0px auto; }
+
+.table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; }
+
+.th {
+  text-align: center; }
+
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; }
