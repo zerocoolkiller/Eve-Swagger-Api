@@ -1,4 +1,5 @@
 import { createAction, handleActions } from 'redux-actions'
+import  Config  from '../Config'
 
 const defaultState = { list: 'list', 
 Loading: 'true'};
@@ -21,7 +22,7 @@ export default handleActions({
 }, defaultState)
 
 export const callingApi = () => (dispatch) => {
-  return fetch('http://localhost:8000/api/getapi')
+  return fetch(Config.Apisever + '/api/getapi')
   .then(response => response.json())
   .then(json => {
     dispatch(added(json));

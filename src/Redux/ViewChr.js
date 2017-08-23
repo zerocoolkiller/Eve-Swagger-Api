@@ -1,5 +1,6 @@
 import { createAction, handleActions } from 'redux-actions'
 import { typeIdToName } from '../commtools/TypeId'
+import Config from '../Config'
 
 
 const defaultState = {
@@ -55,13 +56,6 @@ export default handleActions({
 
 }, defaultState)
 
-// export const callingApi = () => (dispatch) => {
-//   return fetch('http://localhost:8000/api/getapi')
-//   .then(response => response.json())
-//   .then(json => {
-//     dispatch(added(json));
-//     dispatch(loaded('false'));
-//   })
 
 
 
@@ -72,7 +66,7 @@ export const callingApiPre = () => (dispatch, getState) => {
     fetch('https://esi.tech.ccp.is/v1/characters/' + getState().ViewChr.Cid + '/medals/?datasource=tranquility&token=' + getState().ViewChr.At)
         .then(function (response) {
             if (!response.ok) {
-                return fetch('http://localhost:8000/rf?rf=' + getState().ViewChr.Rt + '&id=' + getState().ViewChr.Id)
+                return fetch(Config.Apisever + '/rf?rf=' + getState().ViewChr.Rt + '&id=' + getState().ViewChr.Id)
                     .then(response => response.json())
                     .then((json) => {
                         dispatch(updateAt(json));
@@ -93,29 +87,29 @@ export const callingApiPre = () => (dispatch, getState) => {
 //https://esi.tech.ccp.is/latest/characters/*ID*/skills/?datasource=tranquility&token=*TOKEN*
 
 export const callingEveSkill = () => (dispatch, getState) => {
-    
-  fetch('https://esi.tech.ccp.is/latest/characters/' + getState().ViewChr.Cid + '/skills/?datasource=tranquility&token=' + getState().ViewChr.At)
+
+    fetch('https://esi.tech.ccp.is/latest/characters/' + getState().ViewChr.Cid + '/skills/?datasource=tranquility&token=' + getState().ViewChr.At)
         .then(response => response.json())
         .then(json => {
-            
-             var SkillList = ( json.skills.map((item, i) => {
-                 
-                return  {
-                    skill_id: typeIdToName(item.skill_id) ,
+
+            var SkillList = (json.skills.map((item, i) => {
+
+                return {
+                    skill_id: typeIdToName(item.skill_id),
                     current_skill_level: item.current_skill_level,
                     skillpoints_in_skill: item.skillpoints_in_skill
                 }
-                
-               }))
-            
+
+            }))
+
             return SkillList
-            
+
         })
-        .then( SkillList => {
-          
-            dispatch(updateSk( SkillList))
+        .then(SkillList => {
+
+            dispatch(updateSk(SkillList))
             dispatch(updateSkL('true'))
-          
+
         })
         .catch(err => {
             console.log("skill error:" + err)
