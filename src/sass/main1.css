@@ -65,6 +65,10 @@ body {
   border-bottom: 1px solid #555;
   height: 10%; }
 
+  .li-nav-item.active {
+
+  }
+
 .ellipsis {
   max-width: 40px;
   text-overflow: ellipsis;

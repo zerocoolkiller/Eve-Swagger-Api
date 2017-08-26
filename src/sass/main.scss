@@ -49,7 +49,7 @@ body {
    text-align: center;
 }
 
-.ul-nav {
+.ul-nav  {
       justify-content: left;
     list-style-type: none;
     display : block;
@@ -74,13 +74,17 @@ body {
 
 .li-nav-item {
    
-        float: top;
+    float: top;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+                    & :active {
+            background-color: #4CAF50;
+            color: white;
+    }
 }
 
 
@@ -111,7 +115,8 @@ body {
 }
 
 .page {
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    width: 100%;
      justify-content: center;
+
 }

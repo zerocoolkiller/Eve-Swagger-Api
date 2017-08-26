@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../Pictures/logo.jpg";
+import Img from "../Pictures/header.jpg";
 
 // Home page component
 export default class Banner extends React.Component {
