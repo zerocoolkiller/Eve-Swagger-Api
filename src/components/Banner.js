@@ -1,4 +1,5 @@
 import React from "react";
+import Img from "../Pictures/logo.jpg";
 
 // Home page component
 export default class Banner extends React.Component {
@@ -6,9 +7,7 @@ export default class Banner extends React.Component {
   render() {
     return (
       <div className="page-banner">
-       <div className= "Text">
-        <h1>Eve Character Viewer </h1>
-        </div>
+          <img src={ Img } alt="oh no" width='100%' height='100%'/>
       </div>
     );
   }

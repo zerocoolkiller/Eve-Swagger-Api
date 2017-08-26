@@ -8,6 +8,7 @@ import Banner from './components/Banner'
 import Footer from './components/Footer'
 import { Route } from 'react-router-dom'
 import ChrView from './containers/Chrview/index'
+import Img from "./Pictures/logo.jpg";
 
 class App extends Component {
   render() {
