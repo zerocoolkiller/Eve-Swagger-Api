@@ -29,6 +29,7 @@
     "jquery": "^3.2.1",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
+    "numeral": "^2.0.6",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",

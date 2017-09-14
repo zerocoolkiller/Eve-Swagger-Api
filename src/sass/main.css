@@ -95,3 +95,17 @@ body {
   height: 100%;
   width: 100%;
   justify-content: center; }
+
+.top {
+  margin: 30px 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.middel {
+  margin: 0px 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: left;
+  justify-content: space-between; }

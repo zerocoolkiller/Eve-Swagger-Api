@@ -14,6 +14,7 @@ class Chr extends React.Component {
         this.props.updateAt('');
         this.props.updateRt('');
         this.props.updateSk('');
+        this.props.updateCoD('failed');
     }
 
     Charview(a1, a2, a3, a4) {

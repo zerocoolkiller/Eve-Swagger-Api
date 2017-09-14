@@ -14,14 +14,7 @@ const Nav = props =>  (
   </div>
 )
 
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//   changePage: (p) => push(p)
-// }, dispatch)
 
-// export default connect(
-//   null, 
-//   mapDispatchToProps
-// )(Nav)
 
 
 export default connect(state => ({
@@ -32,3 +25,4 @@ export default connect(state => ({
          changePage: (p) => push(p)
     }
 )(Nav)
+  

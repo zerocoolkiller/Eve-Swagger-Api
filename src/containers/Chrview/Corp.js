@@ -6,15 +6,15 @@ import * as ViewChrActions from '../../Redux/ViewChr'
 import numeral from 'numeral';
 
 
-class Chr extends React.Component {
+class Corp extends React.Component {
  
         render() {
-        if (this.props.ViewChr.SkillUpdate === 'true') {
-            const SkillList = this.props.ViewChr.Skill.map((item, i) => {
-                return <tr key={item.skill_id}>
-                  <td>{item.skill_id}</td>
-                    <td className="ellipsis">{item.current_skill_level}</td>
-                    <td>{numeral(item.skillpoints_in_skill).format('0,0')}</td>
+        if (this.props.ViewChr.CorpD === 'true') {
+            const CorpList = this.props.ViewChr.Corp.map((item, i) => {
+                return <tr key={item.record_id}>
+                  <td>{item.start_date}</td>
+                    <td>{item.corporation_id}</td>
+
 
                 </tr>
 
@@ -24,11 +24,11 @@ class Chr extends React.Component {
                 <table className='table' style={{ 'height': '300px','width':'375px', 'overflow': 'scroll', 'display': 'block' }}>
                     <tbody>
                         <tr>
-                            <th> Skill </th>
-                            <th> Level </th>
-                            <th> Skill Points</th>
+                            <th>Start Date </th>
+                            <th>Corp </th>
+                           
                         </tr>
-                        {SkillList}
+                        {CorpList}
                     </tbody>
                 </table>
             </dev>
@@ -49,4 +49,4 @@ export default connect(state => ({
         ...ViewChrActions,
         changePage: () => push('/vchr')
     }
-)(Chr)
+)(Corp)

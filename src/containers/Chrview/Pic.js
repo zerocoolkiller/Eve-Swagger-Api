@@ -7,9 +7,9 @@ class Pic extends React.Component {
 
     render() {
   
-            return <div>
+            return <span>
                 <img src={'https://image.eveonline.com//Character/' + this.props.ViewChr.Cid + '_256.jpg'} alt={this.props.ViewChr.Cid} />
-            </div>
+            </span>
 
     }
 }
